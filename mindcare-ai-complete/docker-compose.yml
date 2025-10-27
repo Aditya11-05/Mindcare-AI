@@ -1,0 +1,14 @@
+services:
+  mindcare:
+    build: .
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - USE_LLM=${USE_LLM:-false}
+      - EMOTION_MODEL=${EMOTION_MODEL:-bhadresh-savani/distilbert-base-uncased-emotion}
+      - API_URL=http://localhost:8000/chat
+      - DB_URL=sqlite:///mindcare.db
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    volumes:
+      - .:/app

@@ -1,0 +1,14 @@
+torch
+transformers
+fastapi
+uvicorn
+streamlit
+sqlalchemy
+pandas
+scikit-learn
+python-dotenv
+requests
+matplotlib
+openai>=1.0.0
+pydantic
+starlette
